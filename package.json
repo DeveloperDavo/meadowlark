@@ -1,0 +1,25 @@
+{
+  "name": "meadowlark",
+  "version": "1.0.0",
+  "description": "Project app from Web Development with Node and Express by Ethan Brown",
+  "main": "meadowlark.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeveloperDavo/meadowlark.git"
+  },
+  "author": "Developer Davo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DeveloperDavo/meadowlark/issues"
+  },
+  "homepage": "https://github.com/DeveloperDavo/meadowlark#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "express-handlebars": "^3.0.0",
+    "express3-handlebars": "^0.5.2",
+    "handlebars": "^4.0.6"
+  }
+}
