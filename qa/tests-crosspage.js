@@ -1,6 +1,5 @@
 var Browser = require('zombie'),
 	assert = require('chai').assert;
-    bar = 'bar';
 
 var browser;
 
@@ -10,29 +9,27 @@ suite('Cross-Page Tests', function(){
 		browser = new Browser();
 	});
 
-    // FIXME
-	// test('requesting a group rate quote from the hood river tour page should ' +
-	// 		'populate the hidden referrer field correctly', function(done){
-	// 	var referrer = 'http://localhost:3000/tours/hood-river';
-	// 	browser.visit(referrer, function(){
-	// 		browser.clickLink('.requestGroupRate', function(){
-	// 			assert.equal(browser.field('referrer').value, referrer);
-	// 			done();
-	// 		});
-	// 	});
-	// });
+	test('requesting a group rate quote from the hood river tour page should ' +
+			'populate the hidden referrer field correctly', function(done){
+		var referrer = 'http://localhost:3000/tours/hood-river';
+		browser.visit(referrer, function(){
+			browser.clickLink('.requestGroupRate', function(){
+				assert(browser.field('referrer').value === referrer);
+				done();
+			});
+		});
+	});
 
-    // FIXME
-	// test('requesting a group rate from the oregon coast tour page should ' +
-	// 		'populate the hidden referrer field correctly', function(done){
-	// 	var referrer = 'http://localhost:3000/tours/oregon-coast';
-	// 	browser.visit(referrer, function(){
-	// 		browser.clickLink('.requestGroupRate', function(){
-	// 			assert.equal(browser.field('referrer').value, referrer);
-	// 			done();
-	// 		});
-	// 	});
-	// });
+	test('requesting a group rate from the oregon coast tour page should ' +
+			'populate the hidden referrer field correctly', function(done){
+		var referrer = 'http://localhost:3000/tours/oregon-coast';
+		browser.visit(referrer, function(){
+			browser.clickLink('.requestGroupRate', function(){
+				assert(browser.field('referrer').value === referrer);
+				done();
+			});
+		});
+	});
 
 	test('visiting the "request group rate" page dirctly should result ' +
 			'in an empty value for the referrer field', function(done){

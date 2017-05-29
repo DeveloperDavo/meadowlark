@@ -32,9 +32,8 @@ mocha -u tdd -R spec qa/tests-crosspage.js
 mocha -u tdd -R spec qa/tests-unit.js
 ```
 
+### Run JSHint
+`jshint meadowlark.js`
+
 ### Start Grunt
 Start server and then `grunt`
-
-
-
-
